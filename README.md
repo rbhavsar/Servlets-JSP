@@ -57,6 +57,28 @@ response.addCookie(cookie);
 then user can see the past search items again 
 
 
+# Persist info in session-cookie + Display on page.
+- Run todo-demo.jsp on tomcat
+- Run cookies-personalize-form 
+
+# ServletDemo
+
+- MvcDemoServlet.java - > student list will be displayed on view_students.jsp..Used RequestDispatcher to forward request to jsp
+- Run student-form.html -> enter student detail - > It will hit the StudentServlet and diplay the entered information.
+
+
+# ServeletConfig & ServeletContext
+- parse & read WEB-INF/web.xml configuration 
+- Extend Servlet with HttpServlet and we can do below
+- ServletContext context = getServletContext() , ServletConfig config = getServletConfig()
+
+
+
+# JSESSIONID 
+
+When we create new session HttpServletRequest getSession() , it creates the new HttpSession object and also add a Cookie to the response object with name JSESSIONID
+
+
 
 
 

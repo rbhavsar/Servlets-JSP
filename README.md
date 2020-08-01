@@ -86,9 +86,9 @@ then user can see the past search items again
 When we create new session HttpServletRequest getSession() , it creates the new HttpSession object and also add a Cookie to the response object with name JSESSIONID
 Observe JSESSIONID for login flow 
 
-![](/nginx/screenshots/open_login_page.jpg)
-![](/nginx/screenshots/land-welcome.jpg)
-![](/nginx/screenshots/logout-redirect-to-login.jpg)
+![](/screenshots/open_login_page.jpg)
+![](/screenshots/land-welcome.jpg)
+![](/screenshots/logout-redirect-to-login.jpg)
 
 
 

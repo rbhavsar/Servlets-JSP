@@ -6,6 +6,8 @@
 - Provide correct credentils then you will redirect to welcome page and access other pages
 - Press logout - user will redirect to login page.
 
+![](/screenshots/Loginflow.jpg)
+
 # Cookies and Session
 
 - Cookies and session both store information about the user (to make the HTTP request stateful) but the difference is that cookies store information on the client-side (browser) and sessions store information on the server-side
@@ -66,6 +68,11 @@ then user can see the past search items again
 - MvcDemoServlet.java - > student list will be displayed on view_students.jsp..Used RequestDispatcher to forward request to jsp
 - Run student-form.html -> enter student detail - > It will hit the StudentServlet and diplay the entered information.
 
+![](/screenshots/doGet.jpg)
+![](/screenshots/doGet_1.jpg)
+![](/screenshots/doPost.jpg)
+![](/screenshots/doPost_1.jpg)
+
 
 # ServeletConfig & ServeletContext
 - parse & read WEB-INF/web.xml configuration 
@@ -77,7 +84,11 @@ then user can see the past search items again
 # JSESSIONID 
 
 When we create new session HttpServletRequest getSession() , it creates the new HttpSession object and also add a Cookie to the response object with name JSESSIONID
+Observe JSESSIONID for login flow 
 
+![](/nginx/screenshots/open_login_page.jpg)
+![](/nginx/screenshots/land-welcome.jpg)
+![](/nginx/screenshots/logout-redirect-to-login.jpg)
 
 
 

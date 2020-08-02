@@ -90,6 +90,39 @@ Observe JSESSIONID for login flow
 ![](/screenshots/land-welcome.jpg)
 ![](/screenshots/logout-redirect-to-login.jpg)
 
+# ServletContextListener life cycle 
+
+- This is typically used for database initializations, cleanup etc.,
+- Implement SevletContextListener
+- Register TestListner class as listner  ( Two approach )
+- 1st - add annotation @WebListener
+- 2nd - add below entry web.xml
+```
+<listener>
+        <listener-class>com.servletdemo.TestListner</listener-class>
+    </listener>
+```
+
+Code 
+```
+@WebListener
+public class TestListner implements ServletContextListener {
+    public TestListner() {
+        
+    }
+ 	public void contextDestroyed(ServletContextEvent sce)  { 
+    	System.out.println("Server stopped");
+    }
+ 	public void contextInitialized(ServletContextEvent sce)  { 
+    	System.out.println("Server started");
+    }
+}
+```
+
+- Once application server receives a startup request, it will look for any classes registered as servlet context listeners. Once identified, contextInitialized method of every class is executed and app-server will complete it’s startup process.
+- Once started, application server will not be interacting with these listeners anymore. However when shutdown signal is received, app-server will call context destroyed methods of all the listeners before shutdown is completed.
+
+
 
 
 
